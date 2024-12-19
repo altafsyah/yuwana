@@ -17,10 +17,10 @@ export default function BusinessSlider() {
         }}
       >
         <SwiperSlide>
-          <img src="/src/assets/bus1.png" />
+          <img src="/images/bus1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/src/assets/bus2.png" />
+          <img src="/images/bus2.png" />
         </SwiperSlide>
       </Swiper>
     </div>
