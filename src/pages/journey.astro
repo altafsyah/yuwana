@@ -1,0 +1,66 @@
+---
+import clsx from "clsx";
+import Layout from "../layouts/Layout.astro";
+
+const journey2024 = [
+  {
+    title: "Graduation!!!",
+    paragraph:
+      "Finally, after all the things that happened. I can finish my undergradute degree.",
+  },
+  {
+    title: "Stock Opname Library",
+    paragraph: "Maybe I should write more description right?",
+  },
+];
+
+const journey2023 = [
+  {
+    title: "Social Media Specialist - Bukadir",
+    paragraph: "I'll write this later..",
+  },
+];
+---
+
+<Layout title="Nabilah Nata - Journey">
+  <main class="max-w-sm mx-auto pt-10 px-5 py-10 flex-1">
+    <section class="border px-5 py-3 rounded-xl border-blue-500">
+      <h2 class="font-semibold">About this page</h2>
+      <p class="text-gray-500 text-sm font-medium">
+        This section is just a list of my journey.
+      </p>
+    </section>
+    <section class="grid grid-cols-1 gap-4 mt-8">
+      <div class="flex items-start gap-2">
+        <div class="w-1/4">
+          <h2 class="font-semibold text-xl">2024</h2>
+        </div>
+        <div class="w-3/4">
+          {
+            journey2024.map((item, index) => (
+              <div class={clsx(index > 0 ? "mt-3" : "")}>
+                <h3 class="font-semibold">{item.title}</h3>
+                <p class="font-medium text-sm text-gray-500 mt-1">{item.paragraph}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="flex items-start gap-2">
+        <div class="w-1/4">
+          <h2 class="font-semibold text-xl">2023</h2>
+        </div>
+        <div class="w-3/4">
+          {
+            journey2023.map((item, index) => (
+              <div class={clsx(index > 0 ? "mt-3" : "")}>
+                <h3 class="font-semibold">{item.title}</h3>
+                <p class="font-medium text-sm text-gray-500 mt-1">{item.paragraph}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

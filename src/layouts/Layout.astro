@@ -1,22 +1,81 @@
+---
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="py-5 selection:bg-blue-200 selection:text-white min-h-screen h-fit flex flex-col"
+  >
+    <nav
+      class="max-w-sm mx-auto h-fit w-full flex justify-between items-center px-5"
+    >
+      <a href="/" class="font-bold"
+        ><span class="text-yellow-500">n</span>nata</a
+      >
+      <ul
+        class="flex gap-5 px-5 py-2 bg-blue-300 text-white font-semibold rounded-full w-fit"
+      >
+        <li>
+          <a href="/journey" class="text-sm">Journey</a>
+        </li>
+        <li>
+          <a href="/blog" class="text-sm">Blog</a>
+        </li>
+      </ul>
+    </nav>
+    <slot />
+    <footer class="mt-10 w-full flex mx-auto justify-between max-w-sm px-5">
+      <p>© 2024</p>
+      <p>Nabilah Nata.</p>
+    </footer>
+    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  body {
+    height: 100dvh;
+    overflow-y: scroll;
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #6baf8d;
+    --sb-size: 6px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
 </style>
