@@ -24,7 +24,7 @@ export default function ImageCollege() {
         )}
       >
         <img
-          src="/src/assets/exp1.png"
+          src="/images/exp1.png"
           alt="AA"
           className="object-cover w-full rounded-xl bg-transparnt h-full"
         />
@@ -37,7 +37,7 @@ export default function ImageCollege() {
         )}
       >
         <img
-          src="/src/assets/exp2.png"
+          src="/images/exp2.png"
           alt="AA"
           className="object-cover w-full rounded-xl bg-transparent h-full"
         />
@@ -53,7 +53,7 @@ export default function ImageCollege() {
         )}
       >
         <img
-          src="/src/assets/exp3.png"
+          src="/images/exp3.png"
           alt="AA"
           className="object-cover w-full rounded-xl bg-transparent h-full"
         />
